@@ -98,11 +98,12 @@ const Hero: React.FC = () => {
             </a>
 
             {/* Social Links */}
+            {/* Links */}
             <div className="flex gap-4">
               <a href="https://github.com/Rakshith2004" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
                 <Github size={24} className="group-hover:rotate-12 transition-transform duration-300" />
               </a>
-              <a href="https://www.linkedin.com/in/rakshithvrao/" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
+              <a href="https://www.linkedin.com/in/rakshith-v-rao-611633266/" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
                 <Linkedin size={24} className="group-hover:rotate-12 transition-transform duration-300" />
               </a>
               <a href="mailto:raorakshith163@gmail.com" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
