@@ -38,16 +38,6 @@ const Hero: React.FC = () => {
     }
   };
 
-  const handleDownloadResume = () => {
-    const resumeUrl = '/Rakshith_V_Rao_Resume.pdf';
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.download = 'Rakshith_V_Rao_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Animation */}
@@ -97,27 +87,32 @@ const Hero: React.FC = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up" 
                style={{ animationDelay: '1s' }}>
-            <button 
-              onClick={handleDownloadResume}
+            {/* Download Resume Button */}
+            <a 
+              href="/Rakshith_V_Rao_Resume.pdf" 
+              download="Rakshith_V_Rao_Resume.pdf"
               className="group bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-lg flex items-center gap-2"
             >
               <Download size={20} className="group-hover:animate-bounce" />
               Download Resume
-            </button>
+            </a>
+
+            {/* Social Links */}
             <div className="flex gap-4">
-              <a href="#" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
+              <a href="https://github.com/Rakshith2004" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
                 <Github size={24} className="group-hover:rotate-12 transition-transform duration-300" />
               </a>
-              <a href="#" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
+              <a href="https://www.linkedin.com/in/rakshithvrao/" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
                 <Linkedin size={24} className="group-hover:rotate-12 transition-transform duration-300" />
               </a>
-              <a href="#" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
+              <a href="mailto:raorakshith163@gmail.com" className="p-3 bg-slate-800 hover:bg-slate-700 rounded-full transition-all duration-300 transform hover:scale-110 hover:shadow-lg group">
                 <Mail size={24} className="group-hover:rotate-12 transition-transform duration-300" />
               </a>
             </div>
           </div>
         </div>
 
+        {/* Scroll Down Button */}
         <button 
           onClick={scrollToNextSection}
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce cursor-pointer hover:text-blue-400 transition-colors duration-300"
